@@ -1,0 +1,38 @@
+.icon {
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    position: relative;
+    display: block;
+    background-color: currentColor;
+    color: inherit;
+}
+.icon.arrow-down {
+    -webkit-mask-image: url(arrow-down.svg);
+    mask-image: url(arrow-down.svg);
+}
+.icon.arrow-left {
+    -webkit-mask-image: url(arrow-left.svg);
+    mask-image: url(arrow-left.svg);
+}
+.icon.arrow-right {
+    -webkit-mask-image: url(arrow-right.svg);
+    mask-image: url(arrow-right.svg);
+}
+.icon.arrow-up {
+    -webkit-mask-image: url(arrow-up.svg);
+    mask-image: url(arrow-up.svg);
+}
+.icon.close {
+    -webkit-mask-image: url(close.svg);
+    mask-image: url(close.svg);
+}
+.icon.menu-hamburger {
+    -webkit-mask-image: url(menu-hamburger.svg);
+    mask-image: url(menu-hamburger.svg);
+}
+.icon.open-in-new {
+    -webkit-mask-image: url(open-in-new.svg);
+    mask-image: url(open-in-new.svg);
+}

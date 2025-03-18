@@ -1,0 +1,20 @@
+.bbit_widgetRecensioni.bbit_largo {
+    font-size: 1em;
+    width: 480px;
+    max-width: 100%;
+}
+.bbit_widgetRecensioni .bbit_recensioni {
+    max-height: 480px;
+    overflow: auto;
+}
+.bbit_widgetRecensioni.bbit_largo a[target="_blank"]::after {    
+    display: none;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .bbit_widgetRecensioni.bbit_largo {
+        width: 100%;
+    }
+}

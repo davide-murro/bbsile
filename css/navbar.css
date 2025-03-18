@@ -1,0 +1,249 @@
+#navbar {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+#navbar #navbar-header {
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    overflow-y: auto;
+}
+#navbar #navbar-header #nav-home-button-container {
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    align-items: center;
+}
+#navbar #navbar-header #nav-home-button-container #nav-home-button {
+    padding: 1em;
+}
+#navbar #navbar-header #nav-home-button-container #nav-home-button img {
+    display: block;
+    height: 130px;
+    width: auto;
+    transition: transform 0.2s;
+}
+#navbar #navbar-header #nav-home-button-container #nav-home-button:hover img {
+    transform: rotate(2deg) scale(1.1);
+}
+
+#navbar #navbar-header #navbar-nav-open-button {    
+    font-size: 1em;
+    display: none;
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+    margin: 0;
+    background-color: transparent;
+    color: #8F5C1E;
+    border: none;
+    z-index: 9;
+    opacity: 0;
+    transition: color 0.2s, background-color 0.2s, transform 0.2s, opacity 0.2s, display 0.2s allow-discrete; 
+}
+#navbar #navbar-header #navbar-nav-open-button .icon { 
+    display: block;
+    width: 2em;
+    height: 2em;
+}
+#navbar #navbar-header #navbar-nav-open-button:hover {
+    color: #CF8F4F;
+    cursor: pointer;
+}
+
+#navbar #navbar-nav-container {
+    max-width: 1024px;
+    margin: auto;
+    overflow-y: auto;
+    display: flex;
+    background: linear-gradient(to right, #8F5C1E, #8F5C1E);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+}
+#navbar #navbar-nav-container #navbar-nav-close-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+    margin: 0;
+    color: #F2F2F2;
+    background-color: #8F5C1E;
+    border: none;
+    z-index: 9;
+    transition: background-color 0.2s, opacity 0.2s 0.2s, transform 0.2s 0.2s;
+}
+#navbar #navbar-nav-container #navbar-nav-close-button .icon { 
+    display: block;
+    width: 2em;
+    height: 2em;
+}
+#navbar #navbar-nav-container #navbar-nav-close-button:hover {
+    cursor: pointer;
+    background-color: #CF8F4F;
+}
+#navbar #navbar-nav-container #navbar-nav {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navbar #navbar-nav-container #navbar-nav li {
+    flex-grow: 1;
+}
+#navbar #navbar-nav-container #navbar-nav li a {
+    color: #8F5C1E;
+    margin: 0;
+    padding: 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background: 
+        linear-gradient(to right, transparent, transparent),
+        linear-gradient(to right, #2A9B9D, #2A9B9D);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: color 0.2s, background-size 0.2s;
+}
+#navbar #navbar-nav-container #navbar-nav li a:hover,
+#navbar #navbar-nav-container #navbar-nav li.navbar-nav-link-active a {
+    color: #2A9B9D;
+    background-size: 0 2px, 100% 2px;
+}
+
+#gotop-button {
+    display: block;
+    width: 3em;
+    height: 3em;
+    padding: 0.5em;
+    margin-top: 1em;
+    position: sticky;
+    bottom: 0;
+    left: 100%;
+    z-index: 3;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: background-color 0.2s, transform 0.2s, opacity 0.2s, display 0.2s allow-discrete;
+}
+#gotop-button:not(.shown) {
+    display: none;
+    opacity: 0;
+    transform: translate(0, 50%);
+}
+#gotop-button .icon {
+    display: block;
+    width: 2em;
+    height: 2em;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    #navbar #navbar-header  #nav-home-button-container #nav-home-button img {
+        height: 80px;
+    }
+
+    #navbar #navbar-header #navbar-nav-open-button {
+        display: initial;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    #navbar.open #navbar-header #navbar-nav-open-button {
+        display: none;
+        opacity: 0;
+        transform: translate(0, -50%);
+    }
+
+    #navbar:not(.open) #navbar-nav-container {
+        opacity: 0;
+        display: none;
+    }
+    #navbar #navbar-nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        -webkit-backdrop-filter: blur(0.5em);
+        backdrop-filter: blur(0.5em);
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding: 1em;
+        padding-top: 5em;
+        box-shadow: none;
+        z-index: 9;
+        transition: opacity 0.2s, display 0.2s allow-discrete; 
+    }
+    #navbar:not(.open) #navbar-nav-container #navbar-nav-close-button {
+        opacity: 0;
+        transform: translate(0, -50%);
+    }
+    #navbar #navbar-nav-container #navbar-nav-close-button {
+        display: block;
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    #navbar:not(.open) #navbar-nav-container #navbar-nav {
+        transform: translate(0, -50%);
+    }
+    #navbar #navbar-nav-container #navbar-nav {
+        flex-direction: column;
+        width: 480px;
+        max-width: 100%;
+        background-color: #8F5C1E;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transform: translate(0, 0);
+        transition: transform 0.2s; 
+    }
+    #navbar #navbar-nav-container #navbar-nav li {
+        display: block;
+        width: 100%;
+    }
+    #navbar #navbar-nav-container #navbar-nav li a {
+        color: #F2F2F2;
+        background: none;
+    }
+    #navbar #navbar-nav-container #navbar-nav li a:hover,
+    #navbar #navbar-nav-container #navbar-nav li.navbar-nav-link-active a {
+        color: #2A9B9D;
+    }
+}
+
+
+/* STARTING STYLE */
+@starting-style {
+    #navbar #navbar-header #navbar-nav-open-button {
+        opacity: 0;
+        transform: translate(0, -50%);
+    }
+    #navbar #navbar-nav-container {
+        opacity: 0;
+    }
+    #navbar #navbar-nav-container #navbar-nav-close-button {
+        opacity: 0;
+        transform: translate(0, -50%);
+    }
+    #navbar #navbar-nav-container #navbar-nav {
+        transform: translate(0, -50%);
+    }
+    
+    #gotop-button {
+        opacity: 0;
+        transform: translate(0, 50%);
+    }
+}

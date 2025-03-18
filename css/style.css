@@ -19,6 +19,7 @@ html
     font-style: normal;
 
     overflow-wrap: break-word;
+    word-break: break-word;
     scroll-behavior: smooth;
 
     background-color: #F2F2F2;

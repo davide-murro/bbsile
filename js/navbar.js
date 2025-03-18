@@ -27,6 +27,11 @@ window.onscroll = function() {
     }
 };
 
+// When window resize close navbar every time
+window.onresize = function() {
+    navbarCloseModal();
+};
+
 // Event listener for open the modal
 navbarOpenButton.addEventListener('click', navbarOpenModal);
 

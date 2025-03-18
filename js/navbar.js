@@ -19,18 +19,18 @@ function navbarCloseModal() {
 }
 
 // When the user scrolls down, hide the button
-window.onscroll = function() {
+window.addEventListener("scroll", function() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         navbarGoTopButton.classList.add('shown');
     } else {
         navbarGoTopButton.classList.remove('shown');
     }
-};
+});
 
 // When window resize close navbar every time
-window.onresize = function() {
+window.addEventListener("resize", function() {
     navbarCloseModal();
-};
+});
 
 // Event listener for open the modal
 navbarOpenButton.addEventListener('click', navbarOpenModal);

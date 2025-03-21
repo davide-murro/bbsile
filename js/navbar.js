@@ -18,6 +18,15 @@ function navbarCloseModal() {
     navbar.classList.remove('open');
 }
 
+// Check if navbar is opened
+function isNavbarModalOpened() {
+    if (navbar.classList.contains('open')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // When the user scrolls down, hide the button
 window.addEventListener("scroll", function() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -29,7 +38,9 @@ window.addEventListener("scroll", function() {
 
 // When window resize close navbar every time
 window.addEventListener("resize", function() {
-    navbarCloseModal();
+    if (isNavbarModalOpened()) {
+        navbarCloseModal();
+    }
 });
 
 // Event listener for open the modal

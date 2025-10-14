@@ -59,13 +59,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
                             <div style="padding: 1em 0;"> 
                                 <p>Inoltro copia del messagio</p>
 
-                                <p><strong>Cognome / Surname:</strong> ' . $surname . '</p>
-                                <p><strong>Nome / Name:</strong> ' . $name . '</p>
+                                <p><strong>Cognome:</strong> ' . $surname . '</p>
+                                <p><strong>Nome:</strong> ' . $name . '</p>
                                 <p><strong>E mail:</strong> ' . $email . '</p>
-                                <p><strong>Telefono / Phone number:</strong> ' . $phone . '</p>
-                                <p><strong>Data arrivo / Check in:</strong> ' . $checkIn . '</p>
-                                <p><strong>Data partenza / Check out:</strong> ' . $checkOut . '</p>
-                                <p><strong>Messaggio / Message:</strong><br>' . $message . '</p>
+                                <p><strong>Telefono:</strong> ' . $phone . '</p>
+                                <p><strong>Data arrivo:</strong> ' . $checkIn . '</p>
+                                <p><strong>Data partenza:</strong> ' . $checkOut . '</p>
+                                <p><strong>Messaggio:</strong><br>' . $message . '</p>
                             </div>
 
                             <p>Le risponderemo al più presto.</p>

@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
                                 <p><strong>Messaggio:</strong><br>' . $message . '</p>
                             </div>
 
-                            <p>Le risponderemo al più presto.</p>
+                            <p>Le risponderemo il prima possibile.</p>
                             <p><a href="https://www.bbsile.it/" style="color: #8F5C1E; text-decoration: underline;">Bed & Breakfast Sile!</a></p>
                         </div>';
 

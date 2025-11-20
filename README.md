@@ -1,4 +1,4 @@
-# BB Sile Bed & Breakfast
+# Bed & Breakfast Sile
 
 Simple website for Bed & Breakfast Sile Treviso
 

@@ -2,6 +2,6 @@
 
 Simple website for Bed & Breakfast Sile Treviso
 
-# Demo link
+## Demo link
 
 https://davide-murro.github.io/bbsile/

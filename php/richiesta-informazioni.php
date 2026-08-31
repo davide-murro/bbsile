@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 <html lang="it">
 <head>
     <meta charset="utf-8">
-	<title>Richiesta Informazioni - Bed and Breakfast Sile - Treviso</title>
+	<title>Bed & Breakfast Sile Treviso - Richiesta Informazioni</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../css/style.css?v=1"/>
 </head>
@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             <h1 class="error-color">Errore durante l'invio dell'email</h1>
             <p><?php echo $errorMessage ?></p>
             <p>
-                <a href="../contacts.html">Torna alla pagina contatti</a>
+                <a href="../contatti.html">Torna alla pagina contatti</a>
                 o
                 <a href="../index.html">Vai alla home</a>
             </p>
